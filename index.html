@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>At your Service with Service Workers</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      a {
+        color: #a07cc0;
+      }
+      li {
+        font-size: 24pt;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .inverse {
+        background: #000;
+        color: #fff;
+      }
+      .remark-slide-content {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .stripe {
+        height: 5px;
+        width: 100%;
+        background-color: indigo;
+        border-top: 1px solid rebeccapurple;
+        border-bottom: 1px solid rebeccapurple;
+        position: absolute;
+        margin-top: 125px;
+        left: 0;
+        right: 0;
+      }
+      .remark-slide-right {
+          bottom: 12px;
+          position: absolute;
+          left: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .carmalou {
+          color: #CCBADC;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# Web Scraping with Node and Puppeteer
+---
+class: left, middle, inverse
+
+# What is Puppeteer?
+---
+class: left, middle, inverse
+
+# What is Puppeteer?
+
+### - Node API for [Headless Chrome](link)
+---
+class: left, middle, inverse
+
+# What is Puppeteer?
+
+### - Node API for [Headless Chrome](link)
+### - Provides high-level API to control Headless Chrome
+---
+class: left, middle, inverse
+
+# What is Puppeteer?
+
+### - Node API for [Headless Chrome](link)
+### - Provides high-level API to control Headless Chrome
+### - Uses the [DevTools Protocol](link)
+---
+class: left, middle, inverse
+
+# What can Puppeteer be used for?
+---
+class: left, middle, inverse
+
+# What can Puppeteer be used for?
+---
+class: left, middle, inverse
+
+# What can Puppeteer be used for?
+
+### - Generate screenshots and PDFs of pages
+---
+class: left, middle, inverse
+
+# What can Puppeteer be used for?
+
+### - Generate screenshots and PDFs of pages
+### - Automate form submission for UI testing
+---
+class: left, middle, inverse
+
+# What can Puppeteer be used for?
+
+### - Generate screenshots and PDFs of pages
+### - Automate form submission for UI testing
+### - Capture a timeline trace to help diagnose performance issues
+---
+class: left, middle, inverse
+
+# What can Puppeteer be used for?
+
+### - Generate screenshots and PDFs of pages
+### - Automate form submission for UI testing
+### - Capture a timeline trace to help diagnose performance issues
+### - Web scraping
+---
+layout: false
+class: left, middle, inverse
+# Carmen Bourlon
+## Twitter: [@carmalou](https://twitter.com/carmalou)
+## Blog: [carmalou.com](https://carmalou.com)
+## MargieMap: [carmalou.com/margie](https://carmalou.com/margie/)
+## Slides: [carmalou.com/at-your-service-serviceworkers](https://carmalou.com/at-your-service-serviceworkers/)
+## Repo: [github.com/carmalou/at-your-service-serviceworkers](https://github.com/carmalou/at-your-service-serviceworkers)
+
+</textarea>
+<script src="./scripts/remark-latest.min.js">
+</script>
+<script>
+  var slideshow = remark.create();
+  var arr = document.getElementsByClassName('remark-slide-content');
+  for(var i = 0; i < arr.length; i++) {
+    var tmpEl = document.createElement('div');
+    var innerLink = document.createElement('a');
+    innerLink.setAttribute('href', 'https://twitter.com/carmalou');
+    var innerText = document.createTextNode('Twitter: carmalou');
+    tmpEl.classList.add('remark-slide-right');
+    innerLink.classList.add('carmalou');
+    innerLink.appendChild(innerText);
+    tmpEl.appendChild(innerLink);
+    arr[i].appendChild(tmpEl);
+  }
+</script>
+</body>
+</html>

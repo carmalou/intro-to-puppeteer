@@ -1,0 +1,1 @@
+Puppeteer is a Node api for Headless Chrome -- which allows you to run Chrome without a GUI. Puppeteer is great for automating form submissions or screen scraping. This talk will walk you through the basics of Puppeteer and show several useful examples.
