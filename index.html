@@ -142,14 +142,55 @@ class: center, middle, inverse
 
 # Let's get started!
 ---
+class: left, middle, inverse
+
+# 1. Navigate to a webpage
+---
+class: left, middle, inverse
+
+# 1. Navigate to a webpage
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch({headless: false});
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 800 })
+    await page.goto('https://carmalou.com');
+  
+    await browser.close();
+  })();
+```
+---
+class: left, middle, inverse
+
+# 2. Take a screenshot
+---
+class: left, middle, inverse
+
+# 2. Take a screenshot
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 800 })
+    await page.goto('https://carmalou.com');
+    await page.screenshot({ path: './screenshots/myscreenshot' + Date.now() + '.png', fullPage: true });
+  
+    await browser.close();
+  })();
+```
+---
 layout: false
 class: left, middle, inverse
 # Carmen Bourlon
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](https://carmalou.com)
 ## MargieMap: [carmalou.com/margie](https://carmalou.com/margie/)
-## Slides: [carmalou.com/at-your-service-serviceworkers](https://carmalou.com/at-your-service-serviceworkers/)
-## Repo: [github.com/carmalou/at-your-service-serviceworkers](https://github.com/carmalou/at-your-service-serviceworkers)
 
 </textarea>
 <script src="./scripts/remark-latest.min.js">
