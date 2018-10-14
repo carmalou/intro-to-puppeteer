@@ -130,7 +130,7 @@ class: left, middle, inverse
 class: left, middle, inverse
 
 ## Most examples of Puppeteer use [`async` and `await`](link) over promises
-## You can use promises simply but using `.then()`
+## You can use promises simply by using `.then()`
 ---
 class: left, middle, inverse
 
@@ -179,11 +179,67 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto('https://carmalou.com');
+    
+    // this is the important parts
     await page.screenshot({ path: './screenshots/myscreenshot' + Date.now() + '.png', fullPage: true });
   
     await browser.close();
   })();
 ```
+---
+class: left, middle, inverse
+
+# 3. Get page source code
+---
+class: left, middle, inverse
+
+# 3. Get page source code
+
+```javascript
+  &hellip;
+
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://www.carmalou.com', {waitUntil: 'networkidle2'});
+
+  // this is the important part
+  var html = await page.content();
+  
+  //save our html in a file
+  //... do some stuff
+  await browser.close();
+
+  &hellip;
+```
+---
+class: left, middle, inverse
+
+# 4. Get list of github repos
+---
+class: left, middle, inverse
+
+# 4. Get list of github repos
+
+```javascript
+&hellip;
+
+  var repoLinks = '#user-repositories-list li h3 a';
+
+  await page.goto('https://github.com/carmalou?tab=repositories', 
+    {waitUntil: 'networkidle2'});
+  await page.waitForSelector('#user-repositories-list li');
+  
+  var tmp = await page.evaluate(() => {
+      var repos = document.querySelectorAll(repoLinks);
+      return Array.from(repos).map((repo) => { return repo.href });
+  });
+
+  // write file here
+
+  await browser.close();
+
+  &hellip;
+  ```
 ---
 layout: false
 class: left, middle, inverse
