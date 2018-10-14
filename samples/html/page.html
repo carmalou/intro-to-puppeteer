@@ -1,0 +1,1099 @@
+<!DOCTYPE html><html><head>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63981645-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta charset="utf-8">
+<meta https-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<meta property="og:title" content="Carmalou.JS">
+<title>Carmalou.JS</title>
+<meta property="og:description" content="Dropping JavaScript knowledge, one post at a time.">
+<meta property="og:url" content="carmalou.com/">
+<meta property="og:site_name" content="Carmalou.JS">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@carmalou">
+<meta name="twitter:creator" content="@carmalou">
+<meta name="twitter:title" content="Carmalou.JS">
+<meta name="twitter:description" content="Dropping JavaScript knowledge, one post at a time.">
+<meta name="twitter:url" content="carmalou.com/">
+
+<meta name="keywords" content="Jekyll, theme, JavaScript, Education, HTML, CSS">
+
+<link rel="icon" href="">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/prism.css">
+<script src="/js/prism.js"></script>
+<link rel="canonical" href="carmalou.com/">
+<link rel="alternate" type="application/atom+xml" title="Carmalou.JS" href="carmalou.com/feed.xml">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id=""></script>
+
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+
+<div class="container">
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <h1 class="site-title"><a href="/">Carmalou.JS</a></h1>
+    <h3 class="site-meta">All Things JavaScript</h3>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+        
+        <a class="page-link" href="/">Home</a>
+        
+        
+        
+        <a class="page-link" href="/about/">About</a>
+        
+        
+        
+        <a class="page-link" href="/archives/">Archives</a>
+        
+        
+        
+        <a class="page-link" href="/categories/">Categories</a>
+        
+        
+        
+        <a class="page-link" href="/tags/">Tags</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    
+
+  <div class="page-content col-sm-8">
+    <div class="home">
+  <div class="post" itemscope="" itemtype="https://schema.org/BlogPosting">
+    
+    
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="/lets-take-this-offline/2018/07/17/lets-take-this-offline-pt4.html">Let's take this offline: IndexedDB</a>
+      </h1>
+      <meta itemprop="keywords" content="Offline-First,IndexedDB,Connectivity,Internet-Connection,JavaScript,Lets-take-this-offline,KCDC">
+      <p class="post-meta">
+      Posted in
+      
+      <a href="/categories/#Lets-take-this-offline">Lets-take-this-offline</a>&nbsp;
+      
+      
+      and tagged
+      
+      <a href="/tags/#Offline-First" title="Offline-First">Offline-First </a>, 
+      
+      <a href="/tags/#IndexedDB" title="IndexedDB">IndexedDB </a>, 
+      
+      <a href="/tags/#Connectivity" title="Connectivity">Connectivity </a>, 
+      
+      <a href="/tags/#Internet-Connection" title="Internet-Connection">Internet-Connection </a>, 
+      
+      <a href="/tags/#JavaScript" title="JavaScript">JavaScript </a>, 
+      
+      <a href="/tags/#Lets-take-this-offline" title="Lets-take-this-offline">Lets-take-this-offline </a>, 
+      
+      <a href="/tags/#KCDC" title="KCDC">KCDC </a>
+      
+      
+      <time itemprop="datePublished" datetime="2018-07-17">
+      on Jul 17, 2018
+      </time>
+      </p>
+    </header>
+
+    <article class="post-content" itemprop="articleBody">
+      <p>Last week I was at <a href="https://kcdc.info">KCDC</a> and it was absolutely amazing. I was lucky enough to not only attend, but also to speak about something near and dear to my heart – <a href="https://offlinefirst.org/">Offline First</a> techniques. This time I was talking about using <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+
+<p>I’ve written about the importance of offline availability <a href="https://carmalou.com/lets-take-this-offline/2017/09/24/lets-take-this-offline-pt1.html">here</a>. Offline First offers a kind way to handle a user’s loss of connection – something over which they have little to no control. And even more than that – implementing Offline First techniques can help people, which I’ve written about <a href="https://carmalou.com/lets-take-this-offline/2018/05/18/map-the-internet.html">here</a>.</p>
+
+<p>Before we dive into any code, let’s talk about IndexedDB’s structure. I think IndexedDB is more similar to <a href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a>, rather than traditional relational <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>. So let’s delve into how IndexedDB data is stored.</p>
+
+<p>Each web app can have multiple IndexedDB databases, which are made up of <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore">Object Stores</a>. An Object Store is kind of like a table, but it doesn’t use columns. It’s a place to store Objects, which will probably look similar to a server response or ajax request. Later on, we’ll look at some examples.</p>
+
+<p>Within an Object Store, there are Indexes. An <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/index">Index</a> is a defined property within an Object Store. It’s a little bit like a column, except that it doesn’t have a defined type, nor does it require a type.</p>
+
+<p>Indexes have various properties which can be applied to them. A few common ones include <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/autoIncrement"><code class="highlighter-rouge">autoIncrement</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Structuring_the_database"><code class="highlighter-rouge">unique</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath"><code class="highlighter-rouge">keyPath</code></a>. When we apply <code class="highlighter-rouge">autoIncrement</code> to an Index, the Index will create something similar to an auto-incrementing ID in SQL. I mentioned before that Indexes don’t have type requirements, but every rule needs an exception. When we use <code class="highlighter-rouge">autoIncrement</code> our Index will always be a number. However, we don’t need to specify a type for this to happen, nor do we need to pass in a number, as IndexedDB is going to handle that for us.</p>
+
+<p>Another handy property we can apply is <code class="highlighter-rouge">unique</code>. <code class="highlighter-rouge">unique</code> allows us to specify whether or not an Index value can be duplicated. So for instance, if we wanted a list of email addresses, we might say that the email Index would be unique. This would keep any duplicates from being added. In the event that someone tries to add an email that is already in our Object Store, the email (and associated record) won’t be added. This helps protect the integrity of the data.</p>
+
+<p>The last property we’ll discuss here is <code class="highlighter-rouge">keyPath</code>. The <code class="highlighter-rouge">keyPath</code> property allows us to define a sort of “master” Index within our Object Store. It’s a little similar to a primary key in a SQL table, but like most Indexes, does not require a specified type. Defining an Index as a <code class="highlighter-rouge">keyPath</code> allows us to look up records directly by that property.</p>
+
+<p>Using our email example from before, if we specified the email address Index as our Object Stores <code class="highlighter-rouge">keyPath</code>, we could look up “ceo@bigdealcompany.com” directly, and get that record. If the <code class="highlighter-rouge">keyPath</code> for a record were a name instead, we would need to look up “Patricia CEO” to find the email address. Specifically, we cannot directly look up records via an Index that <em>has not</em> been defined as a <code class="highlighter-rouge">keyPath</code>.</p>
+
+<p>Now that we have a good idea of IndexedDB’s structure, we’ll look at some code in the next post.</p>
+
+<p><a href="https://www.twitter.com/carmalou">Questions? Tweet me!</a></p>
+
+    </article> <hr>
+    
+    
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="/lets-take-this-offline/2018/05/18/map-the-internet.html">MargieMap: Mapping The Internet</a>
+      </h1>
+      <meta itemprop="keywords" content="Offline-First,Lets-Take-This-Offline,Mapping,Offline-Access,Intermittent-Connectivity">
+      <p class="post-meta">
+      Posted in
+      
+      <a href="/categories/#Lets-take-this-offline">Lets-take-this-offline</a>&nbsp;
+      
+      
+      and tagged
+      
+      <a href="/tags/#Offline-First" title="Offline-First">Offline-First </a>, 
+      
+      <a href="/tags/#Lets-Take-This-Offline" title="Lets-Take-This-Offline">Lets-Take-This-Offline </a>, 
+      
+      <a href="/tags/#Mapping" title="Mapping">Mapping </a>, 
+      
+      <a href="/tags/#Offline-Access" title="Offline-Access">Offline-Access </a>, 
+      
+      <a href="/tags/#Intermittent-Connectivity" title="Intermittent-Connectivity">Intermittent-Connectivity </a>
+      
+      
+      <time itemprop="datePublished" datetime="2018-05-18">
+      on May 18, 2018
+      </time>
+      </p>
+    </header>
+
+    <article class="post-content" itemprop="articleBody">
+      <p>Earlier today I was lucky enough to speak at <a href="https://200ok.us/">200OK</a> in Tulsa. My talk, Mapping The Internet, is about a project I’ve been working on called <a href="https://carmalou.com/margie/">MargieMap</a>.</p>
+
+<p>MargieMap is a visualization of United States census tracts by income. It also layers libraries on top of the census tracts. I used <a href="link">Mapbox</a> to host the map tiles. The income data comes from the <a href="https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml">U.S. Census Bureau</a> and the library data came from the <a href="https://www.imls.gov/research-evaluation/data-collection/public-libraries-survey/find-your-library">Institute of Museum and Library Services</a>.</p>
+
+<p>I’m planning to open source the data I’ve gathered, but I haven’t found a suitable (read: affordable) way to do that yet.</p>
+
+<h1 id="why-income">Why income?</h1>
+
+<p>I’ve been interested in the correlation between income and internet access for a long time. A lack of Internet Access contributes to the <a href="https://blog.fetc.org/2018/01/25/digital-equity-strategies-for-addressing-the-homework-gap/">Homework Gap</a>.</p>
+
+<p>Of course a lack of internet access isn’t limited to households with school-aged children, nor are it’s challenges. According to a <a href="https://www.pewinternet.org/2015/04/01/us-smartphone-use-in-2015/">2015 Pew Research Study</a> nearly 20 percent of adults in the United States are smartphone-dependent – meaning they do not have access to the Internet outside of their smartphone.</p>
+
+<p>These individuals reported using their phone for a multitude of things including job searches and looking up medical conditions. A large number of these individuals also reported losing their cell phone data due to cost.</p>
+
+<p>With internet access being so prevalent, it’s hard for some developers to imagine not having connection, but the truth is – everyone will lose connection. Losing connection is something that is almost completely beyond a person’s control. Unfortunately, it’s usually beyond the control of the person when they’ll regain their connection.</p>
+
+<h1 id="why-libraries">Why libraries?</h1>
+
+<p>Free wifi is a very common feature for restaurants and coffee shops, but the truth is that wifi isn’t really free. Patrons of the establishment are expected to buy things in order to hang out and use the wifi.</p>
+
+<p>Public libraries are one of the few places a person can go and use the internet without having to pay for a meal or a drink – which is really important if someone is unemployed and searching for jobs online. There are so many reasons why someone might need to use the internet – to research an illness, pay bills, or research for school. Fortunately, public libraries offer internet access without a fee.</p>
+
+<h1 id="how-can-i-use-the-map">How can I use the map?</h1>
+
+<p>The map has categorized incomes by color – low incomes are heavy blue and fade as the median income increases. Higher incomes start off light and turn into a heavy pink. You can search by zip code, city, or state and see the incomes in that area. If you click on an area on the map, you’ll see the median individual income for that tract.</p>
+
+<p>You might also notice orange dots scattered around the map – those are public libraries. The goal of the map was to visualize the income data along with libraries and see if there’s any correlation between income and libraries.</p>
+
+<h1 id="whats-next">What’s next?</h1>
+
+<p>I’ve gotten data for all 50 states onto the map, but I also have data for U.S. territories as well. I plan to map the income data for the territories, but I’ve been struggling to find a list of libraries for the territories. If you know where I could find this data, <a href="https://twitter.com/carmalou">please let me know!</a></p>
+
+<p>Starting small, I’d like to find high/low incomes for the country, and for each state as well. Once I have that, I’ll be able to focus on those income tracts and see if they have libraries and how many.</p>
+
+<p>There’s so much I want to do with this data – MargieMap is just the first step. I’m very excited to see what all I learn, and I’ll be sure to blog about it too!</p>
+
+<p><em>** I would be remiss if I didn’t mention all the help I got from <a href="https://devin-clark.com/">Devin Clark</a>. Devin is a JavaScript dev with a specific interest in geo and mapping, and he was a great resource on mapping tools. Thanks Devin! **</em></p>
+
+    </article> <hr>
+    
+    
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="/maintenance/2018/05/01/enable-https-on-github.html">How to setup HTTPS on Github Pages</a>
+      </h1>
+      <meta itemprop="keywords" content="Website,Blog,Github,Maintenance">
+      <p class="post-meta">
+      Posted in
+      
+      <a href="/categories/#Maintenance">Maintenance</a>&nbsp;
+      
+      
+      and tagged
+      
+      <a href="/tags/#Website" title="Website">Website </a>, 
+      
+      <a href="/tags/#Blog" title="Blog">Blog </a>, 
+      
+      <a href="/tags/#Github" title="Github">Github </a>, 
+      
+      <a href="/tags/#Maintenance" title="Maintenance">Maintenance </a>
+      
+      
+      <time itemprop="datePublished" datetime="2018-05-01">
+      on May 1, 2018
+      </time>
+      </p>
+    </header>
+
+    <article class="post-content" itemprop="articleBody">
+      <p>I’ve been considering moving off of Github Pages for a while because of issues with HTTPS not working with custom domains.</p>
+
+<p>But Github Pages makes everything so easy! Just push to the repository where my code would live anyway and boom, it’s done. So when they introduced HTTPS for custom domains, I was ecstatic!</p>
+
+<p>The only problem was, I couldn’t find specific steps all in one place for how to do it. So I wrote down what I did here so you don’t have to have six tabs open like I did.</p>
+
+<h4 id="1-if-you-see-an-error-about-not-being-able-to-use-https-check-your-dns-provider">1. If you see an error about not being able to use HTTPS, check your DNS provider.</h4>
+
+<p>You probably need to change the IP address your domain’s A record is pointed to. <a href="https://help.github.com/articles/troubleshooting-custom-domains/#https-errors">A list of IP address you can use is available here.</a></p>
+
+<h4 id="2-go-into-your-repos-settings-and-delete-the-custom-url-and-save">2. Go into your repos settings and delete the custom URL and save.</h4>
+<h4 id="21-while-still-on-this-page-re-add-the-custom-url-and-save">2.1 While still on this page, re-add the custom URL and save.</h4>
+
+<p>This will trigger the CNAME file being deleted from your repo, and then re-added which will trigger the HTTPS availability.</p>
+
+<h4 id="3-while-still-on-the-settings-page-click-enable-https-underneath-your-custom-url">3. While still on the settings page, click <code class="highlighter-rouge">Enable HTTPS</code> underneath your custom url.</h4>
+
+<p>This took a couple of minutes for me (less than 5 minutes) because they had to generate the certificate. Once the certificate is generated, you’ll be about to click the checkbox.</p>
+
+<p>Aaaaand, voila! You now have HTTPS enabled on your site.</p>
+
+<p>Vive la Github Pages!</p>
+
+<p><a href="https://www.twitter.com/carmalou">Questions? Tweet me!</a></p>
+
+    </article> <hr>
+    
+    
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="/javascript/2018/04/17/beginners-try-three-things.html">What can I do when I'm stumped?</a>
+      </h1>
+      <meta itemprop="keywords" content="JavaScript,Beginners,Learning,How-To,Getting-Started,Mentorship,Mentor">
+      <p class="post-meta">
+      Posted in
+      
+      <a href="/categories/#JavaScript">JavaScript</a>&nbsp;
+      
+      
+      and tagged
+      
+      <a href="/tags/#JavaScript" title="JavaScript">JavaScript </a>, 
+      
+      <a href="/tags/#Beginners" title="Beginners">Beginners </a>, 
+      
+      <a href="/tags/#Learning" title="Learning">Learning </a>, 
+      
+      <a href="/tags/#How-To" title="How-To">How-To </a>, 
+      
+      <a href="/tags/#Getting-Started" title="Getting-Started">Getting-Started </a>, 
+      
+      <a href="/tags/#Mentorship" title="Mentorship">Mentorship </a>, 
+      
+      <a href="/tags/#Mentor" title="Mentor">Mentor </a>
+      
+      
+      <time itemprop="datePublished" datetime="2018-04-17">
+      on Apr 17, 2018
+      </time>
+      </p>
+    </header>
+
+    <article class="post-content" itemprop="articleBody">
+      <p>A pretty typical beginner dilemma: you’re completely stumped by an issue with your code. You’ve tried multiple solutions, but nothing is working. You’re stumped.</p>
+
+<p>But, you’re also worried about reaching out for help because you don’t want to reach out too often. What can you do?</p>
+
+<p>Well, if you’re in this situation, I hope firstly that you have someone more experienced you can reach out to. That helps tremendously. Mentors can be found at local usergroups (you can check <a href="https://www.meetup.com/">meetup</a> to find usergroups in your area) or even online using coding forums.</p>
+
+<p>If you’ve already secured a mentor, you’re ahead of the curve! But if you’re worried about asking too many questions, it can be tough to know when you should keep working on a problem versus when it’s been long enough and you should ask.</p>
+
+<p>Some people advocate a time-based system. Something like, “don’t spend more than X hours on a problem.” I propose another system – one that isn’t time-based.</p>
+
+<p>A system that has worked for me in the past is to try three things before asking any question. It’s important to also write down what you’re trying and the result you’re getting.</p>
+
+<p>This has multiple benefits. Firstly it gives you an exact template to use if you aren’t sure how to ask your question. You can simply tell your mentor that you tried X and then Y happened, but you were hoping for Z outcome. This will help your mentor because they can review what you’ve been attempting and put themselves into your mindset. They’ll understand better where your confusion lies and be able to explain the issue – and hopefully the solution – in a way you’ll understand.</p>
+
+<p>The other benefit is, in my opinion, even more important and beneficial. I’ve found this method very helpful because usually the act of trying something and documenting the outcome will give you something to search for online. That, in turn, will point you in another direction – quite possibly the direction you need to go! Oftentimes I didn’t even need to ask for help because this method would lead me to an answer, or at the very least a different problem. Often when you’re stuck on one problem, getting a different error will feel like progress!</p>
+
+<p>One last point I want to make is how important your mentor is. A good mentor will be able to tell you to take a break and come back to the issue or tell you to keep working on a problem because you’re close. They won’t belittle your attempts or make you feel stupid because you didn’t come to the answer on your own.</p>
+
+<p>It’s perfectly fine, even encouraged, to be conscientious of someone else’s time. However if you feel like you can’t approach someone because they make you feel less than, go find a new mentor.</p>
+
+<p>I hope this helps. If you have questions, feel free to <a href="https://twitter.com/carmalou">tweet me!</a></p>
+
+    </article> <hr>
+    
+    
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="/lets-take-this-offline/2017/12/19/lets-take-this-offline-pt3.html">Let's take this offline: Intro to Service Workers</a>
+      </h1>
+      <meta itemprop="keywords" content="Offline-First,Service-Workers,Connectivity,Internet-Connection,JavaScript,Lets-take-this-offline">
+      <p class="post-meta">
+      Posted in
+      
+      <a href="/categories/#Lets-take-this-offline">Lets-take-this-offline</a>&nbsp;
+      
+      
+      and tagged
+      
+      <a href="/tags/#Offline-First" title="Offline-First">Offline-First </a>, 
+      
+      <a href="/tags/#Service-Workers" title="Service-Workers">Service-Workers </a>, 
+      
+      <a href="/tags/#Connectivity" title="Connectivity">Connectivity </a>, 
+      
+      <a href="/tags/#Internet-Connection" title="Internet-Connection">Internet-Connection </a>, 
+      
+      <a href="/tags/#JavaScript" title="JavaScript">JavaScript </a>, 
+      
+      <a href="/tags/#Lets-take-this-offline" title="Lets-take-this-offline">Lets-take-this-offline </a>
+      
+      
+      <time itemprop="datePublished" datetime="2017-12-19">
+      on Dec 19, 2017
+      </time>
+      </p>
+    </header>
+
+    <article class="post-content" itemprop="articleBody">
+      <p><a href="https://serviceworke.rs/">Service Workers</a> are a super cool bit of tech that allows your user’s browser to cache files and assets. Why is this so cool? Because eventually your user will lose connection. What happens then? Without something to bridge the gap between the time user loses connection and the time they regain connection, your user is just out of luck.</p>
+
+<p>But no more! Service workers are here to help bridge the gap (<a href="https://caniuse.com/#feat=serviceworkers">at least in certain browsers</a>). With the browser caching the files and images you choose, your user can continue using your site until the connection comes back.</p>
+
+<p><strong>Note: Service workers on their own cannot cache AJAX requests. I’ll talk about solutions for caching API requests in a later blog post.</strong></p>
+
+<p>To start using a service worker you’ll need some JavaScript for your application, as well a service worker file. I’ve created a demo Let’s get started!</p>
+
+<h1 id="step-one-register-your-service-worker">Step One: Register your service worker</h1>
+
+<p>Registering your service work is very simple. The code looks like this:</p>
+
+<pre class=" language-js"><code class=" language-js">
+<span class="token keyword">if</span><span class="token punctuation">(</span>navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'service-worker.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code>
+</pre>
+
+<p>The above code would go in your application’s JavaScript file. All it’s doing is letting the browser know to go ahead and register that service worker. Be sure to wrap your register function in an if-statement because cross-browser support for service workers isn’t quite there yet.</p>
+
+<h1 id="step-two-install-your-service-worker">Step Two: Install your service worker</h1>
+
+<p>This code lives in your <code class="highlighter-rouge">service-worker.js</code> file:</p>
+
+<pre class=" language-js"><code class=" language-js">
+<span class="token comment">// service worker</span>
+self<span class="token punctuation">.</span><span class="token function-variable function">oninstall</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  caches<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'cash'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>cache<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cache<span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token string">'index.html'</span><span class="token punctuation">,</span>
+      <span class="token string">'/img/my-image-name.jpg'</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code>
+</pre>
+
+<p>Service workers expose certain events, including <code class="highlighter-rouge">oninstall</code> and <code class="highlighter-rouge">fetch</code>. The method above opens a cache in the browser and adds files to the cache. This way, if your app goes offline, the browser already has files and can load them in. Another benefit of this is speeding up your site’s response time. Since the files are cached, the browser no longer needs to serve files from a remote server. This ends up giving your users a great performance increase.</p>
+
+<h1 id="step-three-specify-what-happens-on-fetch">Step Three: Specify what happens on fetch</h1>
+
+<p>This code also lives in your <code class="highlighter-rouge">service-worker.js</code> file:</p>
+
+<pre class=" language-js"><code class=" language-js">
+<span class="token comment">// fetch function</span>
+<span class="token comment">// called when connection is lost</span>
+self<span class="token punctuation">.</span><span class="token function-variable function">onfetch</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// this will grab the very last request</span>
+  event<span class="token punctuation">.</span><span class="token function">respondWith</span><span class="token punctuation">(</span>caches<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>request<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code>
+</pre>
+
+<p>This is the function that will be called when your files need to be fetched. When files are cached, they are saved like a stack. Older caches are closer to the bottom, with newest caches being on top. The above function will grab the latest cache and send that to the browser where it can be rendered.</p>
+
+<p>And with that, you’re done! You can grab this code and run it in a server (I like to use <a href="https://www.npmjs.com/package/https-server">https-server</a>). Once you stop the server, you can refresh the page and see your site is still there! Pretty cool, huh?</p>
+
+<p><a href="https://www.twitter.com/carmalou">Questions? Tweet me!</a></p>
+
+    </article> <hr>
+    
+    
+  
+  </div>
+</div>
+
+    <section class="pager">
+  
+  
+  <li class="next"><a href="/page2/" title="Older">Older →</a></li>
+  
+</section>
+
+
+  </div>
+  <div class="col-sm-2">
+<div class="sidebar-module about">
+  <h4>About Me</h4>
+  <img title="Carmen Long" src="https://avatars1.githubusercontent.com/u/7669975?v=3&amp;s=460" alt="Carmen Long">
+  <span>I'm Carmalou, JavaScript extraordinaire! <br> Not really, but I am really good at Googling things that I don't know! <br>I made this blog to share the things I've learned with others, so if you have questions, drop me a line!</span>
+  <br>
+
+  
+
+  You can contact me via:
+
+  
+  <a href="mailto:carmenbourlonlong@gmail.com" title="mailto: carmenbourlonlong@gmail.com">Email</a> /
+  
+  
+  <a href="https://github.com/carmalou" title="GithubID: carmalou">Github</a> /
+  
+  
+  <a href="https://twitter.com/carmalou" title="TwitterID: carmalou">Twitter</a>
+  
+
+  
+
+</div>
+
+<div class="sidebar-module"> <!-- sidebar-module-inset">-->
+  <h4>Copyright Notice</h4>
+
+  
+
+  <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">
+    <img src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png">
+  </a>
+  <br>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike</a>
+
+  
+
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Recent Posts</h4>
+  
+  <li>
+  <a href="/lets-take-this-offline/2018/07/17/lets-take-this-offline-pt4.html" title="Let's take this offline: IndexedDB" rel="bookmark">Let's take this offline: IndexedDB</a>
+  </li>
+  
+  <li>
+  <a href="/lets-take-this-offline/2018/05/18/map-the-internet.html" title="MargieMap: Mapping The Internet" rel="bookmark">MargieMap: Mapping The Internet</a>
+  </li>
+  
+  <li>
+  <a href="/maintenance/2018/05/01/enable-https-on-github.html" title="How to setup HTTPS on Github Pages" rel="bookmark">How to setup HTTPS on Github Pages</a>
+  </li>
+  
+  <li>
+  <a href="/javascript/2018/04/17/beginners-try-three-things.html" title="What can I do when I'm stumped?" rel="bookmark">What can I do when I'm stumped?</a>
+  </li>
+  
+  <li>
+  <a href="/lets-take-this-offline/2017/12/19/lets-take-this-offline-pt3.html" title="Let's take this offline: Intro to Service Workers" rel="bookmark">Let's take this offline: Intro to Service Workers</a>
+  </li>
+  
+</div>
+
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  
+  <li><a href="/categories/#Async" title="Async" rel="1">Async (1)</a></li>
+  
+  <li><a href="/categories/#Demystified" title="Demystified" rel="2">Demystified (2)</a></li>
+  
+  <li><a href="/categories/#Game-Development" title="Game-Development" rel="1">Game-Development (1)</a></li>
+  
+  <li><a href="/categories/#How-To" title="How-To" rel="8">How-To (8)</a></li>
+  
+  <li><a href="/categories/#Ionic" title="Ionic" rel="2">Ionic (2)</a></li>
+  
+  <li><a href="/categories/#JavaScript" title="JavaScript" rel="6">JavaScript (6)</a></li>
+  
+  <li><a href="/categories/#JavaScript-Literature" title="JavaScript-Literature" rel="3">JavaScript-Literature (3)</a></li>
+  
+  <li><a href="/categories/#Learning" title="Learning" rel="1">Learning (1)</a></li>
+  
+  <li><a href="/categories/#Lets-take-this-offline" title="Lets-take-this-offline" rel="5">Lets-take-this-offline (5)</a></li>
+  
+  <li><a href="/categories/#Live-coding" title="Live-coding" rel="1">Live-coding (1)</a></li>
+  
+  <li><a href="/categories/#Mac-Magic" title="Mac-Magic" rel="1">Mac-Magic (1)</a></li>
+  
+  <li><a href="/categories/#Maintenance" title="Maintenance" rel="1">Maintenance (1)</a></li>
+  
+  <li><a href="/categories/#Offline-First" title="Offline-First" rel="1">Offline-First (1)</a></li>
+  
+  <li><a href="/categories/#Projects" title="Projects" rel="1">Projects (1)</a></li>
+  
+  <li><a href="/categories/#Raspberry-Pi" title="Raspberry-Pi" rel="1">Raspberry-Pi (1)</a></li>
+  
+  <li><a href="/categories/#Series" title="Series" rel="1">Series (1)</a></li>
+  
+  <li><a href="/categories/#Speaking" title="Speaking" rel="3">Speaking (3)</a></li>
+  
+  <li><a href="/categories/#Weird-Nuances" title="Weird-Nuances" rel="3">Weird-Nuances (3)</a></li>
+  
+</div>
+
+<div class="sidebar-module">
+    <h4>Tags</h4>
+
+    
+    
+
+    
+        <a href="/tags/#AJAX" title="AJAX">AJAX</a>&nbsp;
+    
+        <a href="/tags/#ASP.NET" title="ASP.NET">ASP.NET</a>&nbsp;
+    
+        <a href="/tags/#AngularJS" title="AngularJS">AngularJS</a>&nbsp;
+    
+        <a href="/tags/#Appcamp" title="Appcamp">Appcamp</a>&nbsp;
+    
+        <a href="/tags/#Apps" title="Apps">Apps</a>&nbsp;
+    
+        <a href="/tags/#Ask-Questions" title="Ask-Questions">Ask-Questions</a>&nbsp;
+    
+        <a href="/tags/#Async" title="Async">Async</a>&nbsp;
+    
+        <a href="/tags/#Automation" title="Automation">Automation</a>&nbsp;
+    
+        <a href="/tags/#Beginners" title="Beginners">Beginners</a>&nbsp;
+    
+        <a href="/tags/#Better-Alert" title="Better-Alert">Better-Alert</a>&nbsp;
+    
+        <a href="/tags/#Blog" title="Blog">Blog</a>&nbsp;
+    
+        <a href="/tags/#Bots" title="Bots">Bots</a>&nbsp;
+    
+        <a href="/tags/#C#" title="C#">C#</a>&nbsp;
+    
+        <a href="/tags/#C-Sharp" title="C-Sharp">C-Sharp</a>&nbsp;
+    
+        <a href="/tags/#Callbacks" title="Callbacks">Callbacks</a>&nbsp;
+    
+        <a href="/tags/#Camp" title="Camp">Camp</a>&nbsp;
+    
+        <a href="/tags/#Carver" title="Carver">Carver</a>&nbsp;
+    
+        <a href="/tags/#CoffeeScript" title="CoffeeScript">CoffeeScript</a>&nbsp;
+    
+        <a href="/tags/#Command-Line" title="Command-Line">Command-Line</a>&nbsp;
+    
+        <a href="/tags/#Complete-Guide" title="Complete-Guide">Complete-Guide</a>&nbsp;
+    
+        <a href="/tags/#Complete-Guide," title="Complete-Guide,">Complete-Guide,</a>&nbsp;
+    
+        <a href="/tags/#Conferences" title="Conferences">Conferences</a>&nbsp;
+    
+        <a href="/tags/#Connectivity" title="Connectivity">Connectivity</a>&nbsp;
+    
+        <a href="/tags/#Console.log" title="Console.log">Console.log</a>&nbsp;
+    
+        <a href="/tags/#Databases" title="Databases">Databases</a>&nbsp;
+    
+        <a href="/tags/#Debugging" title="Debugging">Debugging</a>&nbsp;
+    
+        <a href="/tags/#Demos" title="Demos">Demos</a>&nbsp;
+    
+        <a href="/tags/#Development" title="Development">Development</a>&nbsp;
+    
+        <a href="/tags/#Dynamic" title="Dynamic">Dynamic</a>&nbsp;
+    
+        <a href="/tags/#Electron" title="Electron">Electron</a>&nbsp;
+    
+        <a href="/tags/#Environment-Variables" title="Environment-Variables">Environment-Variables</a>&nbsp;
+    
+        <a href="/tags/#Falsy-Values" title="Falsy-Values">Falsy-Values</a>&nbsp;
+    
+        <a href="/tags/#For-Loops" title="For-Loops">For-Loops</a>&nbsp;
+    
+        <a href="/tags/#Functions" title="Functions">Functions</a>&nbsp;
+    
+        <a href="/tags/#Games" title="Games">Games</a>&nbsp;
+    
+        <a href="/tags/#Get-Started" title="Get-Started">Get-Started</a>&nbsp;
+    
+        <a href="/tags/#Getting-Started" title="Getting-Started">Getting-Started</a>&nbsp;
+    
+        <a href="/tags/#GitHub" title="GitHub">GitHub</a>&nbsp;
+    
+        <a href="/tags/#Github" title="Github">Github</a>&nbsp;
+    
+        <a href="/tags/#Hair-loss" title="Hair-loss">Hair-loss</a>&nbsp;
+    
+        <a href="/tags/#Hemingway" title="Hemingway">Hemingway</a>&nbsp;
+    
+        <a href="/tags/#Heroku" title="Heroku">Heroku</a>&nbsp;
+    
+        <a href="/tags/#Hoisting" title="Hoisting">Hoisting</a>&nbsp;
+    
+        <a href="/tags/#How-To" title="How-To">How-To</a>&nbsp;
+    
+        <a href="/tags/#How-To," title="How-To,">How-To,</a>&nbsp;
+    
+        <a href="/tags/#Hubot" title="Hubot">Hubot</a>&nbsp;
+    
+        <a href="/tags/#Hybrid-Apps" title="Hybrid-Apps">Hybrid-Apps</a>&nbsp;
+    
+        <a href="/tags/#IndexedDB" title="IndexedDB">IndexedDB</a>&nbsp;
+    
+        <a href="/tags/#Intermittent-Connectivity" title="Intermittent-Connectivity">Intermittent-Connectivity</a>&nbsp;
+    
+        <a href="/tags/#Internet-Connection" title="Internet-Connection">Internet-Connection</a>&nbsp;
+    
+        <a href="/tags/#Internet-of-Things" title="Internet-of-Things">Internet-of-Things</a>&nbsp;
+    
+        <a href="/tags/#Interviews" title="Interviews">Interviews</a>&nbsp;
+    
+        <a href="/tags/#IoT" title="IoT">IoT</a>&nbsp;
+    
+        <a href="/tags/#IoT," title="IoT,">IoT,</a>&nbsp;
+    
+        <a href="/tags/#Ionic" title="Ionic">Ionic</a>&nbsp;
+    
+        <a href="/tags/#JavaScript" title="JavaScript">JavaScript</a>&nbsp;
+    
+        <a href="/tags/#KCDC" title="KCDC">KCDC</a>&nbsp;
+    
+        <a href="/tags/#Learning" title="Learning">Learning</a>&nbsp;
+    
+        <a href="/tags/#Lets-Take-This-Offline" title="Lets-Take-This-Offline">Lets-Take-This-Offline</a>&nbsp;
+    
+        <a href="/tags/#Lets-take-this-offline" title="Lets-take-this-offline">Lets-take-this-offline</a>&nbsp;
+    
+        <a href="/tags/#Libraries" title="Libraries">Libraries</a>&nbsp;
+    
+        <a href="/tags/#Literature" title="Literature">Literature</a>&nbsp;
+    
+        <a href="/tags/#Live-coding" title="Live-coding">Live-coding</a>&nbsp;
+    
+        <a href="/tags/#Loops" title="Loops">Loops</a>&nbsp;
+    
+        <a href="/tags/#Loosely-typed" title="Loosely-typed">Loosely-typed</a>&nbsp;
+    
+        <a href="/tags/#MVC" title="MVC">MVC</a>&nbsp;
+    
+        <a href="/tags/#Maintenance" title="Maintenance">Maintenance</a>&nbsp;
+    
+        <a href="/tags/#Mapping" title="Mapping">Mapping</a>&nbsp;
+    
+        <a href="/tags/#Mentor" title="Mentor">Mentor</a>&nbsp;
+    
+        <a href="/tags/#Mentorship" title="Mentorship">Mentorship</a>&nbsp;
+    
+        <a href="/tags/#Mobile" title="Mobile">Mobile</a>&nbsp;
+    
+        <a href="/tags/#Mobile" title="Mobile">Mobile</a>&nbsp;
+    
+        <a href="/tags/#Mobile-Development" title="Mobile-Development">Mobile-Development</a>&nbsp;
+    
+        <a href="/tags/#Native-alerts" title="Native-alerts">Native-alerts</a>&nbsp;
+    
+        <a href="/tags/#Navigator" title="Navigator">Navigator</a>&nbsp;
+    
+        <a href="/tags/#Nervousness" title="Nervousness">Nervousness</a>&nbsp;
+    
+        <a href="/tags/#Node" title="Node">Node</a>&nbsp;
+    
+        <a href="/tags/#Offline-Access" title="Offline-Access">Offline-Access</a>&nbsp;
+    
+        <a href="/tags/#Offline-Apps" title="Offline-Apps">Offline-Apps</a>&nbsp;
+    
+        <a href="/tags/#Offline-Camp" title="Offline-Camp">Offline-Camp</a>&nbsp;
+    
+        <a href="/tags/#Offline-First" title="Offline-First">Offline-First</a>&nbsp;
+    
+        <a href="/tags/#Offline-first" title="Offline-first">Offline-first</a>&nbsp;
+    
+        <a href="/tags/#Phaser" title="Phaser">Phaser</a>&nbsp;
+    
+        <a href="/tags/#Planning" title="Planning">Planning</a>&nbsp;
+    
+        <a href="/tags/#Plugins" title="Plugins">Plugins</a>&nbsp;
+    
+        <a href="/tags/#Projects" title="Projects">Projects</a>&nbsp;
+    
+        <a href="/tags/#Promises" title="Promises">Promises</a>&nbsp;
+    
+        <a href="/tags/#Public-Speaking" title="Public-Speaking">Public-Speaking</a>&nbsp;
+    
+        <a href="/tags/#Public-speaking" title="Public-speaking">Public-speaking</a>&nbsp;
+    
+        <a href="/tags/#Raspberry-Pi" title="Raspberry-Pi">Raspberry-Pi</a>&nbsp;
+    
+        <a href="/tags/#Raspberry-Pi," title="Raspberry-Pi,">Raspberry-Pi,</a>&nbsp;
+    
+        <a href="/tags/#React" title="React">React</a>&nbsp;
+    
+        <a href="/tags/#Reference-Types" title="Reference-Types">Reference-Types</a>&nbsp;
+    
+        <a href="/tags/#SQL" title="SQL">SQL</a>&nbsp;
+    
+        <a href="/tags/#Security" title="Security">Security</a>&nbsp;
+    
+        <a href="/tags/#Series" title="Series">Series</a>&nbsp;
+    
+        <a href="/tags/#Service-Workers" title="Service-Workers">Service-Workers</a>&nbsp;
+    
+        <a href="/tags/#Shakespeare" title="Shakespeare">Shakespeare</a>&nbsp;
+    
+        <a href="/tags/#Speaking" title="Speaking">Speaking</a>&nbsp;
+    
+        <a href="/tags/#Star-Wars" title="Star-Wars">Star-Wars</a>&nbsp;
+    
+        <a href="/tags/#Terminal" title="Terminal">Terminal</a>&nbsp;
+    
+        <a href="/tags/#Troubleshooting" title="Troubleshooting">Troubleshooting</a>&nbsp;
+    
+        <a href="/tags/#Truthy-Values" title="Truthy-Values">Truthy-Values</a>&nbsp;
+    
+        <a href="/tags/#Twitter" title="Twitter">Twitter</a>&nbsp;
+    
+        <a href="/tags/#Vanilla-js" title="Vanilla-js">Vanilla-js</a>&nbsp;
+    
+        <a href="/tags/#Website" title="Website">Website</a>&nbsp;
+    
+        <a href="/tags/#Weird-Stuff" title="Weird-Stuff">Weird-Stuff</a>&nbsp;
+    
+        <a href="/tags/#hostname" title="hostname">hostname</a>&nbsp;
+    
+        <a href="/tags/#jQuery" title="jQuery">jQuery</a>&nbsp;
+    
+        <a href="/tags/#raspian" title="raspian">raspian</a>&nbsp;
+    
+        <a href="/tags/#raspian," title="raspian,">raspian,</a>&nbsp;
+    
+        <a href="/tags/#ssh" title="ssh">ssh</a>&nbsp;
+    
+        <a href="/tags/#ssh," title="ssh,">ssh,</a>&nbsp;
+    
+</div>
+
+<div class="sidebar-module">
+  <h4>Archives</h4>
+
+  
+  
+  
+  
+  
+  <li id="2018"> <a href="/archives/#2018">2018</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li id="2017"> <a href="/archives/#2017">2017</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li id="2016"> <a href="/archives/#2016">2016</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li id="2015"> <a href="/archives/#2015">2015</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</div>
+
+
+</div>
+
+
+  
+
+  <footer class="site-footer">
+
+  <p>Copyright © <a href="/">Carmalou.JS</a></p>
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+  on 
+  
+  <a href="https://github.com/">Github</a>
+  
+  | Theme <a href="https://github.com/yulijia/freshman21/">Freshman21</a> Design by <a href="https://yulijia.net">Lijia Yu</a>  
+
+</p></footer>
+
+
+</div>
+
+
+
+
+</body></html>
