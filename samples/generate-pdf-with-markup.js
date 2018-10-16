@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const path = require('path');
-const html = "<h1>Hello OKC.js! Isn't Puppeteer magical?";
+const html = "<h1>Hello OKC.js! Isn't Puppeteer magical?</h1>";
 
 (async () => {
     var fileName = path.join(__dirname, './pdfs/') + 'sample-pdf-' + Date.now() + '.pdf';
