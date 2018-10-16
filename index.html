@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>At your Service with Service Workers</title>
+    <title>Intro to Puppeteer</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -60,38 +60,42 @@ class: center, middle, inverse
 
 # Web Scraping with Node and Puppeteer
 ---
-class: left, middle, inverse
+class: center, middle, inverse
+
+# Web Scraping with Node and Puppeteer
+---
+class: center, middle, inverse
 
 # What is Puppeteer?
+
+![alt text](./gifs/pinocchio1.gif)
 ---
 class: left, middle, inverse
 
 # What is Puppeteer?
 
-### - Node API for [Headless Chrome](link)
+### - Node API for [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 ---
 class: left, middle, inverse
 
 # What is Puppeteer?
 
-### - Node API for [Headless Chrome](link)
+### - Node API for [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 ### - Provides high-level API to control Headless Chrome
 ---
 class: left, middle, inverse
 
 # What is Puppeteer?
 
-### - Node API for [Headless Chrome](link)
+### - Node API for [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 ### - Provides high-level API to control Headless Chrome
-### - Uses the [DevTools Protocol](link)
+### - Uses the [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)
 ---
-class: left, middle, inverse
+class: center, middle, inverse
 
 # What can Puppeteer be used for?
----
-class: left, middle, inverse
 
-# What can Puppeteer be used for?
+![alt text](./gifs/pinocchio-magic.gif)
 ---
 class: left, middle, inverse
 
@@ -123,30 +127,381 @@ class: left, middle, inverse
 ### - Capture a timeline trace to help diagnose performance issues
 ### - Web scraping
 ---
-class: left, middle, inverse
+class: center, middle, inverse
 
 # A quick note about asynchoronous JavaScript in Puppeteer
 ---
 class: left, middle, inverse
 
-# A quick note about asynchoronous JavaScript in Puppeteer
-
-## Most examples of Puppeteer use [`async` and `await`](link) over promises
+## Most examples of Puppeteer use [`async` and `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#Description) over `.then()`
 ---
 class: left, middle, inverse
 
-# A quick note about asynchoronous JavaScript in Puppeteer
-
-## Most examples of Puppeteer use [`async` and `await`](link) over promises
-## You can use promises simply but using `.then()`
+## Most examples of Puppeteer use [`async` and `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#Description) over `.then()`
+## You can use promises simply by using `.then()`
 ---
 class: left, middle, inverse
 
-# A quick note about asynchoronous JavaScript in Puppeteer
-
-## Most examples of Puppeteer use [`async` and `await`](link) over promises
-## You can use promises simply but using `.then()`
+## Most examples of Puppeteer use [`async` and `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#Description) over `.then()`
+## You can use promises simply by using `.then()`
 ## `async` and `await` make for over all cleaner code
+---
+class: center, middle, inverse
+
+# Let's get started!
+
+![alt text](./gifs/barney-puppets.gif)
+---
+class: left, middle, inverse
+
+# A little bit about Puppeteer
+---
+class: left, middle, inverse
+
+# A little bit about Puppeteer
+
+- Browser: Created when Puppeteer connects to a Chromium instance
+---
+class: left, middle, inverse
+
+# A little bit about Puppeteer
+
+- Browser: Created when Puppeteer connects to a Chromium instance
+      - use `{ headless:false }` as an option in launch to show the GUI
+---
+class: left, middle, inverse
+
+# A little bit about Puppeteer
+
+- Browser: Created when Puppeteer connects to a Chromium instance
+      - use `{ headless:false }` as an option in launch to show the GUI
+<br /><br />
+- Page: Provides methods to interact with a tab or extension
+---
+class: left, middle, inverse
+
+# 1. Navigate to a webpage
+---
+class: left, middle, inverse
+
+# 1. Navigate to a webpage
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch({headless: false});
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 800 })
+    await page.goto('https://carmalou.com');
+  
+    await browser.close();
+  })();
+```
+---
+class: left, middle, inverse
+
+# 2. Take a screenshot
+---
+class: left, middle, inverse
+
+# 2. Take a screenshot
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 800 })
+    await page.goto('https://carmalou.com');
+    
+    // this is the important part
+    await page.screenshot({ path: 'filename.png', fullPage: true });
+  
+    await browser.close();
+  })();
+```
+---
+class: left, middle, inverse
+
+# 3. Get page source code
+---
+class: left, middle, inverse
+
+# 3. Get page source code
+
+```javascript
+  &hellip;
+
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://www.carmalou.com', {waitUntil: 'networkidle2'});
+
+  // this is the important part
+  var html = await page.content();
+  
+  //save our html in a file
+  
+  await browser.close();
+
+  &hellip;
+```
+---
+class: left, middle, inverse
+
+# A little bit more about Puppeteer
+---
+class: left, middle, inverse
+
+# A little bit more about Puppeteer
+
+- `page.waitForSelector`: waits for the selector to appear in page
+---
+class: left, middle, inverse
+
+# A little bit more about Puppeteer
+
+- `page.waitForSelector`: waits for the selector to appear in page
+<br /><br />
+- `page.evaluate`: accepts a func parameter to be evaluated in the page context
+---
+class: left, middle, inverse
+
+# A little bit more about Puppeteer
+
+- `page.waitForSelector`: waits for the selector to appear in page
+<br /><br />
+- `page.evaluate`: accepts a func parameter to be evaluated in the page context
+<br /><br />
+- `networkidle2` - indicates navigation is complete
+  - no more than 2 network connections for at least 500 ms
+---
+class: left, middle, inverse
+
+# 4. Get list of github repos
+---
+class: left, middle, inverse
+
+# 4. Get list of github repos
+
+```javascript
+&hellip;
+
+  var repoLinks = '#user-repositories-list li h3 a';
+
+  await page.goto('https://github.com/carmalou?tab=repositories', 
+    {waitUntil: 'networkidle2'});
+  await page.waitForSelector('#user-repositories-list li');
+  
+  var tmp = await page.evaluate(() => {
+      var repos = document.querySelectorAll(repoLinks);
+      return Array.from(repos).map((repo) => { return repo.href });
+  });
+
+  // write file here
+
+  await browser.close();
+
+  &hellip;
+  ```
+---
+class: left, middle, inverse
+
+# Even more about Puppeteer
+---
+class: left, middle, inverse
+
+# Even more about Puppeteer
+
+- `page.focus`: accepts a selector and focuses on it
+---
+class: left, middle, inverse
+
+# Even more about Puppeteer
+
+- `page.focus`: accepts a selector and focuses on it
+- `page.keyboard.type`: simulates keypresses and inputs text
+---
+class: left, middle, inverse
+
+# Even more about Puppeteer
+
+- `page.focus`: accepts a selector and focuses on it
+- `page.keyboard.type`: simulates keypresses and inputs text
+- `page.click`: accepts selector and clicks on it
+---
+class: left, middle, inverse
+
+# Even more about Puppeteer
+
+- `page.focus`: accepts a selector and focuses on it
+- `page.keyboard.type`: simulates keypresses and inputs text
+- `page.click`: accepts selector and clicks on it
+- `page.waitFor`: accepts function which can prolong wait
+ - if function returns true, program resumes
+---
+class: left, middle, inverse
+
+# 5. Scrape data from student loan website
+---
+class: left, middle, inverse
+
+- Step One: Login and handle navigation
+
+```javascript
+&hellip;
+
+await page.goto(config.loginUrl);
+await page.focus('#userid');
+await page.keyboard.type(config.username);
+
+await page.click('#authenticate');
+
+await page.waitForSelector('#pinNumber');
+await page.focus('#pinNumber');
+await page.keyboard.type(config.PIN)
+await page.focus('#recog-no');
+
+await page.click('#authenticate');
+
+await page.waitForSelector('#password');
+await page.focus('#password');
+await page.keyboard.type(config.password);
+
+await page.click('#authenticate');
+
+&hellip;
+```
+---
+class: left, middle, inverse
+
+- Step Two: Wait for elements and data
+
+```javascript
+&hellip;
+
+await page.waitForSelector('#current-balance');
+await page.waitFor(waitforbalance);
+
+await page.waitForSelector('#unpaid-principal');
+await page.waitFor(waitforprincipal);
+
+await page.waitForSelector('#unpaid-interest');
+await page.waitFor(waitforinterest);
+
+&hellip;
+```
+---
+class: left, middle, inverse
+
+```javascript
+&hellip;
+
+function waitforbalance() {
+  return document.getElementById('current-balance').innerHTML != '';
+}
+
+function waitforprincipal() {
+  return document.getElementById('unpaid-principal').innerHTML != '';
+}
+
+function waitforinterest() {
+  return document.getElementById('unpaid-interest').innerHTML != '';
+}
+
+&hellip;
+```
+---
+class: left, middle, inverse
+
+- Step Three: Scrape data and save to file
+
+```javascript
+&hellip;
+
+var currentBalance = await page.evaluate(() => {
+  return document.getElementById('current-balance').innerHTML;
+});
+
+var unpaidPrincipal = await page.evaluate(() => {
+  return document.getElementById('unpaid-principal').innerHTML;
+});
+
+var unpaidInterest = await page.evaluate(() => {
+  return document.getElementById('unpaid-interest').innerHTML;
+});
+
+// write the data to a CSV file
+
+browser.close();
+
+&hellip;
+```
+---
+class: left, middle, inverse
+
+# 6. Generate PDF
+---
+class: left, middle, inverse
+
+# 6. Generate PDF
+
+```javascript
+&hellip;
+// this is the important part
+await page.goto('http://carmalou.com');
+
+// generate pdf (also kind of important)
+await page.pdf({
+  path: fileName, 
+  format: 'Letter',
+  margin: {
+    top: '1in',
+    bottom: '1in',
+    left: '1in',
+    right: '1in'
+  }
+});
+  
+await browser.close();
+&hellip;
+```
+---
+class: left, middle, inverse
+
+# 7. Generate PDF with markup
+---
+class: left, middle, inverse
+
+# 7. Generate PDF with markup
+
+```javascript
+const html = "<h1>Hello OKC.js! Isn't Puppeteer magical?</h1>";
+
+// this is the important part
+await page.setContent(html);
+
+// generate pdf (also pretty important)
+await page.pdf({
+  path: fileName, 
+  format: 'Letter',
+  margin: {
+    top: '1in',
+    bottom: '1in',
+    left: '1in',
+    right: '1in'
+  }
+});
+  
+await browser.close();
+```
+---
+class: center, middle, inverse
+
+# That's all folks!
+
+![alt text](./gifs/pinocchio-dancing.gif)
 ---
 layout: false
 class: left, middle, inverse
@@ -154,8 +509,6 @@ class: left, middle, inverse
 ## Twitter: [@carmalou](https://twitter.com/carmalou)
 ## Blog: [carmalou.com](https://carmalou.com)
 ## MargieMap: [carmalou.com/margie](https://carmalou.com/margie/)
-## Slides: [carmalou.com/at-your-service-serviceworkers](https://carmalou.com/at-your-service-serviceworkers/)
-## Repo: [github.com/carmalou/at-your-service-serviceworkers](https://github.com/carmalou/at-your-service-serviceworkers)
 
 </textarea>
 <script src="./scripts/remark-latest.min.js">
