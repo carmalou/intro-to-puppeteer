@@ -60,34 +60,42 @@ class: center, middle, inverse
 
 # Web Scraping with Node and Puppeteer
 ---
-class: left, middle, inverse
+class: center, middle, inverse
+
+# Web Scraping with Node and Puppeteer
+---
+class: center, middle, inverse
 
 # What is Puppeteer?
+
+![alt text](./gifs/pinocchio1.gif)
 ---
 class: left, middle, inverse
 
 # What is Puppeteer?
 
-### - Node API for [Headless Chrome](link)
+### - Node API for [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 ---
 class: left, middle, inverse
 
 # What is Puppeteer?
 
-### - Node API for [Headless Chrome](link)
+### - Node API for [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 ### - Provides high-level API to control Headless Chrome
 ---
 class: left, middle, inverse
 
 # What is Puppeteer?
 
-### - Node API for [Headless Chrome](link)
+### - Node API for [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 ### - Provides high-level API to control Headless Chrome
-### - Uses the [DevTools Protocol](link)
+### - Uses the [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)
 ---
-class: left, middle, inverse
+class: center, middle, inverse
 
 # What can Puppeteer be used for?
+
+![alt text](./gifs/pinocchio-magic.gif)
 ---
 class: left, middle, inverse
 
@@ -125,22 +133,24 @@ class: center, middle, inverse
 ---
 class: left, middle, inverse
 
-## Most examples of Puppeteer use [`async` and `await`](link) over `.then()`
+## Most examples of Puppeteer use [`async` and `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#Description) over `.then()`
 ---
 class: left, middle, inverse
 
-## Most examples of Puppeteer use [`async` and `await`](link) over `.then()`
+## Most examples of Puppeteer use [`async` and `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#Description) over `.then()`
 ## You can use promises simply by using `.then()`
 ---
 class: left, middle, inverse
 
-## Most examples of Puppeteer use [`async` and `await`](link) over `.then()`
+## Most examples of Puppeteer use [`async` and `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#Description) over `.then()`
 ## You can use promises simply by using `.then()`
 ## `async` and `await` make for over all cleaner code
 ---
 class: center, middle, inverse
 
 # Let's get started!
+
+![alt text](./gifs/barney-puppets.gif)
 ---
 class: left, middle, inverse
 
@@ -232,7 +242,7 @@ class: left, middle, inverse
   var html = await page.content();
   
   //save our html in a file
-  //... do some stuff
+  
   await browser.close();
 
   &hellip;
@@ -385,6 +395,26 @@ await page.waitFor(waitforinterest);
 ---
 class: left, middle, inverse
 
+```javascript
+&hellip;
+
+function waitforbalance() {
+  return document.getElementById('current-balance').innerHTML != '';
+}
+
+function waitforprincipal() {
+  return document.getElementById('unpaid-principal').innerHTML != '';
+}
+
+function waitforinterest() {
+  return document.getElementById('unpaid-interest').innerHTML != '';
+}
+
+&hellip;
+```
+---
+class: left, middle, inverse
+
 - Step Three: Scrape data and save to file
 
 ```javascript
@@ -466,6 +496,12 @@ await page.pdf({
   
 await browser.close();
 ```
+---
+class: center, middle, inverse
+
+# That's all folks!
+
+![alt text](./gifs/pinocchio-dancing.gif)
 ---
 layout: false
 class: left, middle, inverse
